@@ -8,7 +8,6 @@ const routes: Routes = [
   { path: 'contact', redirectTo: 'store/home', pathMatch: 'full' },
   { path: 'blog', redirectTo: 'store/home', pathMatch: 'full' },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes, {useHash:true})],
   exports: [RouterModule]
