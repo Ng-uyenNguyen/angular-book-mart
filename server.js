@@ -1,8 +1,8 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-app.use(express.static(__dirname + "/dist/angular-heroku-demo"));
+app.use(express.static(__dirname + "/dist/angular-bookmart-app"));
 app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname + "/dist/angular-heroku-demo/index.html"));
+  res.sendFile(path.join(__dirname + "/dist/angular-bookmart-app/index.html"));
 });
 app.listen(process.env.PORT || 8080);

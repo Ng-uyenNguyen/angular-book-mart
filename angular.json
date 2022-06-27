@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-chatting-app": {
+    "angular-bookmart-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -21,7 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-chatting-app",
+            "outputPath": "dist/angular-bookmart-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -77,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-chatting-app:build:production"
+              "browserTarget": "angular-bookmart-app:build:production"
             },
             "development": {
-              "browserTarget": "angular-chatting-app:build:development"
+              "browserTarget": "angular-bookmart-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-chatting-app:build"
+            "browserTarget": "angular-bookmart-app:build"
           }
         },
         "test": {
