@@ -35,4 +35,10 @@ export class CartComponent implements OnInit {
   closeCart(): void {
     this.cartService.changeState('out');
   }
+
+  onCheckOut(){
+    this.closeCart();
+    this.cartService.clearCart();
+    
+  }
 }

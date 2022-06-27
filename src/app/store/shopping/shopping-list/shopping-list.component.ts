@@ -9,15 +9,19 @@ import { ShoppingService } from 'src/app/core/services/shopping.service';
   styleUrls: ['./shopping-list.component.scss'],
 })
 export class ShoppingListComponent implements OnInit {
-  searchText = "";
+  searchText = '';
   displayBooks: Book[];
   pageLength: number;
   currentPage: number = 1;
-  constructor(private shoppingService: ShoppingService) { }
+  constructor(private shoppingService: ShoppingService) {}
 
   ngOnInit(): void {
-    this.shoppingService.displaybooksChanged.subscribe(books => this.displayBooks = books);
-    this.shoppingService.pageLenghtChanged.subscribe(length => this.pageLength = length);
+    this.shoppingService.displaybooksChanged.subscribe(
+      (books) => (this.displayBooks = books)
+    );
+    this.shoppingService.pageLenghtChanged.subscribe(
+      (length) => (this.pageLength = length)
+    );
   }
 
   setCurrentPage(page: number) {
@@ -26,8 +30,15 @@ export class ShoppingListComponent implements OnInit {
   }
 
   onSearch(event: any) {
-    if (event.key === "Enter") {
-      this.shoppingService.searchBook(this.searchText)
+    if (event.key === 'Enter') {
+      this.shoppingService.searchBook(this.searchText);
     }
+  }
+
+  onChangePage(type: string) {
+    if (type === 'prev' && this.currentPage - 1 === 0) return;
+    type === 'next'
+      ? this.setCurrentPage(++this.currentPage)
+      : this.setCurrentPage(--this.currentPage);
   }
 }

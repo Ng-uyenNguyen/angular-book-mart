@@ -1,6 +1,5 @@
 <div class="overlay" (click)="closeCart()" [ngStyle]="{'display': state === 'out'? 'none':'block' }"></div>
-<div class="position-fixed top-0 end-0 bg-white border vh-100" style="width: 320px;z-index: 100; opacity: 0"
-    [@cartState]="state">
+<div class="position-fixed top-0 end-0 bg-white border vh-100" style="width: 320px;z-index: 100; opacity: 0" [@cartState]="state">
     <div class="border-bottom px-3 py-4">
         <div class="d-flex">
             <span class="text-center align-middle fs-6 fw-semibold me-auto" style="font-weight: 600;">Shopping
@@ -27,8 +26,7 @@
         </div>
     </div>
 
-    <div class="position-absolute bottom-0 border-top px-3 py-3 w-100 bg-white align-middle cart-footer"
-        style="height: 21%;">
+    <div class="position-absolute bottom-0 border-top px-3 py-3 w-100 bg-white align-middle cart-footer" style="height: 21%;">
         <div class="d-flex align-items-center" style="font-weight: 600;">
             <span class="text-center align-middle fs-5 fw-normal me-auto">Total Price:</span>
             <span type="button" class="text-center align-middle fs-5 fw-semibold">{{cart.totalPrice |
@@ -49,10 +47,14 @@
             </div>
             <div class="modal-body">
                 Check out successfully!
+                <br>
+                {{cart.totalAmount}} books
+                <br>
+                Total: {{cart.totalPrice | currency:'VND'}}
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="onCheckOut()">OK</button>
             </div>
         </div>
     </div>

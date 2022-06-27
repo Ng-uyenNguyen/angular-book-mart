@@ -44,5 +44,13 @@ export class CartService {
     this.cartState.next(state);
   }
 
+  clearCart() {
+    this.cart = {
+      books: [],
+      totalAmount: 0,
+      totalPrice: 0,
+    }
+    this.cartChanged.next(this.cart);
+  }
 
 }

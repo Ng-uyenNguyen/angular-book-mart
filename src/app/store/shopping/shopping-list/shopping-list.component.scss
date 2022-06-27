@@ -1,17 +1,20 @@
 form {
-    position: relative;
-    width: 50%;
+  position: relative;
+  width: 50%;
 
-    .bi-search {
-        position: absolute;
-        right: 30px;
-        font-size: 1.2rem;
-        top: 10%;
-    }
+  .bi-search {
+    position: absolute;
+    right: 30px;
+    font-size: 1.2rem;
+    top: 10%;
+  }
 
-    .form-control {
-        border-radius: 20px;
-        background-color: rgb(246, 246, 246);
-        border-color: rgb(246, 246, 246);
-    }
+  .form-control {
+    border-radius: 20px;
+    background-color: rgb(246, 246, 246);
+    border-color: rgb(246, 246, 246);
+  }
+}
+a {
+  cursor: pointer;
 }

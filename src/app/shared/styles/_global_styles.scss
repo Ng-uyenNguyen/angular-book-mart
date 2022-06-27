@@ -1,38 +1,42 @@
-$light-purple : #916BBF;
+$light-purple: #916bbf;
 $light-purple-hover: #8943df;
-$dark-purple : #1C0C5B;
+$dark-purple: #1c0c5b;
 $dark-gray: #616675;
-$primary-color :#3D2C8D;
-$blue: #1A9CFF;
-$blue: #E9E9E9;
+$primary-color: #3d2c8d;
+$blue: #1a9cff;
+$blue: #e9e9e9;
 $navy-grey: #707991;
 $rich-black: #011627;
-$red: #F71735;
-$light-green: #78E378;
-$iceberg-blue : #8BABD8;
+$red: #f71735;
+$light-green: #78e378;
+$iceberg-blue: #8babd8;
 $text-light-1: rgb(153, 153, 153);
 $text-light-2: #999999;
 $tetx-paragraph: rgb(68, 68, 68);
 
 * {
-    font-family: 'Sora', sans-serif;
+  font-family: "Sora", sans-serif;
 }
 
 body {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 a {
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 @mixin balloon($scale: 1) {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: linear-gradient(180deg, rgba(145, 107, 191, 0.2) 0%, rgba(255, 255, 255, 0.15) 100%);
-    border-radius: 50%;
-    transform: scale($scale);
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(
+    180deg,
+    rgba(145, 107, 191, 0.2) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  border-radius: 50%;
+  transform: scale($scale);
 }

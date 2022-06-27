@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject, tap } from 'rxjs';
+import { CartService } from './cart.service';
 
 
 interface AuthResponseData {
@@ -17,7 +18,7 @@ interface AuthResponseData {
 export class AuthService {
   authStateChanged = new BehaviorSubject<boolean>(Boolean(localStorage.getItem('authState')));
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,private cartService: CartService) {
   }
 
   signup(email: string, password: string) {
@@ -45,6 +46,7 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('authState');
-    this.authStateChanged.next(Boolean(localStorage.getItem('authState')))
+    this.authStateChanged.next(Boolean(localStorage.getItem('authState')));
+    this.cartService.clearCart();
   }
 }

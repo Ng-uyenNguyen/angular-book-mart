@@ -49,7 +49,6 @@ export class ShoppingService {
     this.fetchBooks().subscribe(res => {
       this.listAllBooks = [...res];
       this.listBookFiltered = this.listAllBooks.slice();
-      console.log(this.listAllBooks);
       this.setListBooksEachPage();
     });
   }
