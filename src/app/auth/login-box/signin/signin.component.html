@@ -1,0 +1,17 @@
+<form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="username" class="form-label fw-semibold">Username</label>
+        <input class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email"
+            formControlName="email">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label fw-semibold">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="****************"
+            formControlName="password">
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Remember me</label>
+    </div>
+    <button type="submit" class="btn" [disabled]="signinForm.status == 'INVALID'">SIGN IN</button>
+</form>

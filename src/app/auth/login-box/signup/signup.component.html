@@ -1,0 +1,18 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="username" class="form-label fw-semibold">Username</label>
+        <input class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your username"
+            formControlName='email'>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label fw-semibold">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="****************"
+            formControlName="password">
+    </div>
+    <div class="mb-3">
+        <label for="re-password" class="form-label fw-semibold">Password</label>
+        <input type="password" class="form-control" id="re-password" placeholder="****************"
+            formControlName="repassword">
+    </div>
+    <button type="submit" class="btn mt-1" [disabled]="signupForm.status == 'INVALID'">SIGN UP</button>
+</form>

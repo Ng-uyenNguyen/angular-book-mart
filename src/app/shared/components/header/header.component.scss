@@ -1,0 +1,75 @@
+@use "../../styles/global_styles" as g;
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navbar-brand {
+    color: g.$primary-color;
+}
+
+.navbar-nav {
+    padding: 10px 30px;
+
+    .nav-item {
+        margin: 0 30px;
+        padding: 20px 0;
+
+        a {
+            position: relative;
+            transition: .2s all;
+
+            &:hover {
+                color: g.$primary-color;
+
+                &::after {
+                    width: 5px;
+                    height: 5px;
+                }
+            }
+
+            &::after {
+                content: "";
+                bottom: -8px;
+                width: 0;
+                height: 0;
+                background-color: g.$primary-color;
+                position: absolute;
+                border-radius: 100%;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                transition: 0.2s all;
+            }
+        }
+    }
+}
+
+.active {
+    color: g.$primary-color;
+}
+
+.bi-bag-check {
+    position: relative;
+
+    .cart-total-books {
+        position: absolute;
+        font-size: 10px;
+        background-color: g.$light-purple;
+        color: white;
+        width: 20px;
+        height: 15px;
+        text-align: center;
+        font-weight: 600;
+        vertical-align: middle;
+        border-radius: 10px;
+        right: -10px;
+        top: -5px;
+    }
+}

@@ -1,0 +1,16 @@
+<div class="col" [@bookState]="'visible'">
+    <div class="card p-3 rounded-4 shadow" style="border-radius: 1rem">
+        <a (click)="onNavigate()">
+            <img [src]="book.thumbnailUrl" class="card-img-top" alt="Book's Image" />
+            <div class="card-body px-0">
+                <p class="card-text fw-bold mb-1 text-truncate fs-6" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    [title]="book.title">{{book.title}}</p>
+                <p class="card-text mb-1 book-authors text-truncate" style="font-size: 0.8rem">{{book.authors ||
+                    'Unknown'}}
+                </p>
+                <p class="card-text fw-bold text-danger">{{book.price | currency:"VND"}}</p>
+            </div>
+        </a>
+        <button class="btn btn-circle" (click)="addToCart()"><i class="bi bi-bag-check"></i></button>
+    </div>
+</div>

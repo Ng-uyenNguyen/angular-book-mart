@@ -1,0 +1,60 @@
+@use "../../shared/styles/global_styles" as g;
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.cart-footer {
+    .btn {
+        width: 100%;
+        margin-top: .5rem;
+        border-radius: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 13px;
+        padding: 5px 0;
+    }
+
+    .view-cart-btn {
+        background-color: #f7f7f7;
+
+        &:hover {
+            background-color: #dddddd;
+        }
+    }
+
+    .checkout-btn {
+        background-color: g.$light-purple;
+        color: white;
+
+        &:hover {
+            background-color: g.$light-purple-hover;
+        }
+    }
+}
+
+
+.list-group {
+    .title {
+        line-height: 1.41575em;
+        margin-bottom: 3px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    cursor: pointer;
+    transition: .3s all;
+}

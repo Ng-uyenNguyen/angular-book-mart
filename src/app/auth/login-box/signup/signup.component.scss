@@ -1,0 +1,15 @@
+@use "../../../shared/styles/global_styles" as g;
+
+button {
+    background-color: g.$light-purple;
+    color: white;
+    font-weight: 700;
+    width: 100%;
+    padding: 10px 0;
+    letter-spacing: 2px;
+
+    &:hover {
+        color: white;
+        background-color: #c2a2e9;
+    }
+}

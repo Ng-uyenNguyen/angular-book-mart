@@ -1,0 +1,38 @@
+$light-purple : #916BBF;
+$light-purple-hover: #8943df;
+$dark-purple : #1C0C5B;
+$dark-gray: #616675;
+$primary-color :#3D2C8D;
+$blue: #1A9CFF;
+$blue: #E9E9E9;
+$navy-grey: #707991;
+$rich-black: #011627;
+$red: #F71735;
+$light-green: #78E378;
+$iceberg-blue : #8BABD8;
+$text-light-1: rgb(153, 153, 153);
+$text-light-2: #999999;
+$tetx-paragraph: rgb(68, 68, 68);
+
+* {
+    font-family: 'Sora', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+@mixin balloon($scale: 1) {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(180deg, rgba(145, 107, 191, 0.2) 0%, rgba(255, 255, 255, 0.15) 100%);
+    border-radius: 50%;
+    transform: scale($scale);
+}

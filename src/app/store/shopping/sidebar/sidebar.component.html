@@ -1,0 +1,11 @@
+<div class="w-25 float-start" style="margin-top: 24px">
+    <div class="border">
+        <h4 class="p-3">Categories</h4>
+        <ul class="list-group">
+            <li class="list-group-item px-5" *ngFor="let item of categories">
+                <input class="form-check-input me-1" type="checkbox" [value]="item" (change)="onFilter($event)">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+</div>

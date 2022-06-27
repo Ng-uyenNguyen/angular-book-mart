@@ -1,0 +1,24 @@
+<div class="hstack gap-0 bg-white position-absolute top-50 start-50 translate-middle rounded-3 col-xl-6 col-md-10 col-sm-12"
+    style="height:80%">
+    <div class=" container-fluid vstack justify-content-center illustration-box p-0 rounded-3">
+        <img src="../../../assets/images/illustration.png" />
+        <h4 class="text-white text-center text-uppercase mt-3">Get started with the world of reading</h4>
+
+    </div>
+    <div class="container p-5 login-container" style="width: 75%">
+        <h1 class="text-uppercase fw-bold text-uppercase">Welcome back to</h1>
+        <h1 class="text-uppercase fw-bold app-name">Book Mart</h1>
+        <p class="lead text-muted">Please enter your details</p>
+        <div class="hstack justify-content-around">
+            <a (click)="setCurrentTab('signin')">
+                <h5 class="fw-bold" [ngClass]="currentTab === 'signin'? 'active' : ''">Sign in</h5>
+            </a>
+            <hr style="width: 1px; height: 20px; display: inline-block;">
+            <a (click)="setCurrentTab('signup')">
+                <h5 class="fw-bold" [ngClass]="currentTab === 'signup'? 'active' : ''">Sign up</h5>
+            </a>
+        </div>
+        <app-signin *ngIf="currentTab === 'signin'"></app-signin>
+        <app-signup *ngIf="currentTab === 'signup'"></app-signup>
+    </div>
+</div>

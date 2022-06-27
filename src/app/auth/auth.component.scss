@@ -1,0 +1,34 @@
+@use "../shared/styles/global_styles" as g;
+
+.auth-container {
+    background-color: g.$primary-color;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .balloon:nth-child(1) {
+        @include g.balloon(1);
+        top: -5%;
+        left: -5%;
+    }
+
+    .balloon:nth-child(2) {
+        @include g.balloon(0.8);
+        bottom: -15%;
+        left: -10%;
+    }
+
+    .balloon:nth-child(3) {
+        @include g.balloon(0.6);
+        top: -24%;
+        right: -11%;
+    }
+
+    .balloon:nth-child(4) {
+        @include g.balloon(0.5);
+        bottom: -24%;
+        right: -12%;
+    }
+
+}

@@ -1,0 +1,133 @@
+@use "../../shared/styles/global_styles" as g;
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+$border-radius: 20px;
+$facebook-color: #1877f2;
+$pin-color: #e60023;
+$twitter-color: #1da1f2;
+$ins-color: #f56040;
+
+.container-fluid {
+    font-family: 'Sora', sans-serif;
+
+    .img-box {
+        border-radius: $border-radius;
+    }
+
+    .information-box {
+        height: fit-content;
+        border-radius: $border-radius;
+
+        p {
+            font-size: 1rem;
+        }
+
+        span {
+            color: g.$text-light-1;
+            font-size: 12px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            line-height: 24px;
+        }
+
+        .categories {
+            font-size: 14px;
+        }
+
+        .btn.add-to-cart {
+            padding: .9rem 2rem;
+            background-color: g.$light-purple;
+            color: white;
+            border-radius: 30px;
+            vertical-align: middle;
+            margin-bottom: 1rem;
+
+            &:hover {
+                background-color: g.$light-purple-hover;
+            }
+        }
+
+        .hstack {
+            .btn {
+                border-radius: 35px;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            i {
+                color: white;
+            }
+
+            .btn.fb {
+                background-color: $facebook-color;
+            }
+
+            .btn.tw {
+                background-color: $twitter-color;
+            }
+
+            .btn.ins {
+                background-color: $ins-color;
+            }
+
+            .btn.pin {
+                background-color: $pin-color;
+            }
+
+        }
+
+
+    }
+
+    .book-description {
+        a {
+            cursor: pointer;
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 1.3rem;
+            color: g.$text-light-1;
+            position: relative;
+            padding: 0 30px 13px 30px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 3px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: g.$light-purple;
+                bottom: 0;
+                transition: all .5s ease;
+            }
+
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+
+        a.active {
+            color: black;
+
+            &::before {
+                width: 100%;
+            }
+        }
+
+        .description-box {
+            border-radius: $border-radius;
+
+            p {
+                color: g.$tetx-paragraph;
+                font-size: 14px;
+                line-height: 1.714;
+                font-weight: 300;
+                text-rendering: optimizeLegibility;
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use "../../shared/styles/global_styles" as g;
+
+.illustration-box {
+    width: 40%;
+    height: 100%;
+    background-color: g.$light-purple;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.login-container {
+    h1.app-name {
+        color: g.$light-purple;
+    }
+
+    a {
+        color: g.$navy-grey;
+        cursor: pointer;
+
+        &:hover {
+            color: g.$light-purple;
+        }
+    }
+
+    h5.active {
+        color: g.$light-purple;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+    }
+
+    .custom-shape-divider-top-1655968320 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotateY(270deg);
+    }
+}

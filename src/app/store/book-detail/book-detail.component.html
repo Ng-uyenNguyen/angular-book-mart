@@ -1,0 +1,64 @@
+<div class="w-100 container-fluid p-4">
+    <!-- Book Information -->
+    <div class="d-flex justify-content-between flex-sm-column flex-md-row">
+        <!-- Image box -->
+        <div class="border p-5 img-box shadow">
+            <img [src]="book!.thumbnailUrl" alt="book img" width="400" height="700" />
+        </div>
+        <!-- Information box -->
+        <div class="w-50 border p-5 pb-3 shadow information-box">
+            <ul class="list-group-flush p-0">
+                <li class="list-group-item px-0">
+                    <h2 class="fw-bold">{{book!.title}}</h2>
+                    <span class="author">Author: <span class="text-dark">{{book!.authors}}</span></span>
+                    <span class="m-3">|</span>
+                    <span class="isbn">ISBN : <span class="text-dark">{{book!.isbn}}</span></span>
+                    <span class="m-3">|</span>
+                    <span class="">Total pages: <span class="categories text-dark">{{book!.pageCount}}</span></span>
+                </li>
+                <li class="list-group-item px-0 my-3">
+                    <span class="text-danger fs-5 fw-bold">{{book!.price | currency:'VND'}}</span>
+                    <p class="lead text-muted mt-3">
+                        {{book!.shortDescription}}
+                    </p>
+                </li>
+                <li class="list-group-item px-0 my-3">
+                    <button (click)="addToCart()" class="btn add-to-cart"><i class="bi bi-bag-check me-2"></i>Add to
+                        cart</button>
+                </li>
+                <li class="list-group-item px-0 my-3">
+                    <div>
+                        <span class="categories">Categories: </span>
+                        <span class="categories text-dark">{{book!.categories}}</span>
+                    </div>
+
+                    <div class="hstack gap-3 mt-3">
+                        <button class="btn fb"><i class="bi bi-facebook"></i></button>
+                        <button class="btn tw"><i class="bi bi-twitter"></i></button>
+                        <button class="btn ins"><i class="bi bi-instagram"></i></button>
+                        <button class="btn pin"><i class="bi bi-pinterest"></i></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Book Description -->
+
+    <div class="mt-5 book-description">
+        <div class="tabs hstack gap-5 justify-content-center">
+            <a class="tab" [ngClass]="{active: currentTab == 0}" (click)="setCurrentTab(0)">Description</a>
+            <a class="tab" [ngClass]="{active: currentTab == 1}" (click)="setCurrentTab(1)">Reviews</a>
+        </div>
+        <!-- Description -->
+        <div class="p-5 border description-box" *ngIf="currentTab === 0">
+            <p>{{book!.longDescription}}</p>
+        </div>
+        <div class="p-5 border description-box" *ngIf="currentTab === 1">
+            <h3 class="text-center">0 Reviews</h3>
+        </div>
+    </div>
+    <!-- Related Product -->
+    <div>
+
+    </div>
+</div>

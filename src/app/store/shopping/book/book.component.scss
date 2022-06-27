@@ -1,0 +1,58 @@
+@use "../../../shared/styles/global_styles" as g;
+
+.card-img-top {
+    width: 100%;
+    object-fit: contain;
+}
+
+.book-authors {
+    color: rgb(153, 153, 153);
+    font-weight: 500;
+    list-style-position: outside;
+    overflow-wrap: break-word;
+    text-align: left;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    text-rendering: optimizelegibility;
+    text-size-adjust: 100%;
+}
+
+.card {
+    overflow: hidden;
+
+    .btn-circle {
+        width: 40px;
+        height: 40px;
+        padding: 6px 0px;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.42857;
+        position: absolute;
+        z-index: 100;
+        background-color: white;
+        bottom: 5%;
+        right: 5%;
+        background-color: g.$light-purple;
+        transform: translatex(50px);
+        opacity: 0;
+        transition: 0.3s all;
+
+        &:hover {
+            background-color: g.$light-purple-hover;
+        }
+
+        i {
+            color: white;
+            font-weight: bold;
+        }
+    }
+
+    &:hover {
+        .btn-circle {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+}
