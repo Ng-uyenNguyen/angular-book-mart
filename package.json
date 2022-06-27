@@ -1,15 +1,13 @@
 {
-  "name": "angular-chatting-app",
-  "version": "0.0.0",
-  "engines": {
-    "node": "14.x"
-  },
+  "name": "angular-bookmart-app",
+  "version": "0.0.0",  
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build --aot --prod",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild" : "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -28,7 +26,10 @@
     "rxjs": "~7.5.0",
     "serve-favicon": "^2.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@angular/cli": "~14.0.0",
+    "@angular/compiler-cli": "^14.0.0",
+    "typescript": "~4.7.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.0.0",
@@ -42,5 +43,9 @@
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.7.2"
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.14.5"
   }
 }
